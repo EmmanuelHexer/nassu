@@ -65,7 +65,7 @@ export default function NewsPage() {
 
   return (
     <div>
-      <section className="relative py-16 md:py-24 overflow-hidden" style={{
+      <section className="relative py-24 md:py-32 overflow-hidden" style={{
         backgroundImage: "url('https://images.unsplash.com/photo-1579952363873-27f3bade9f55?q=80&w=2070&auto=format&fit=crop')",
         backgroundSize: "cover",
         backgroundPosition: "center"
@@ -73,12 +73,9 @@ export default function NewsPage() {
         <div className="absolute inset-0 bg-primary-600/75"></div>
         <div className="container-custom relative z-10">
           <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-3xl md:text-4xl font-bold mb-4 text-white" style={{fontFamily: 'Playfair Display'}}>
-              Ghana Football News
+            <h1 className="text-4xl md:text-5xl font-bold text-white" style={{fontFamily: 'Playfair Display'}}>
+              News
             </h1>
-            <p className="text-lg md:text-xl text-white/90">
-              Latest updates from Ghana FA, GPL, and football news across the nation
-            </p>
           </div>
         </div>
       </section>
@@ -134,7 +131,7 @@ export default function NewsPage() {
                       {article.title}
                     </h2>
 
-                    <p className="text-gray-600 mb-6 leading-relaxed text-lg">
+                    <p className="text-gray-600 mb-6 leading-relaxed text-lg line-clamp-3 md:line-clamp-none">
                       {article.contentSnippet}
                     </p>
 

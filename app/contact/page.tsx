@@ -101,7 +101,7 @@ export default function ContactPage() {
 
   return (
     <div>
-      <section className="relative py-16 md:py-24 overflow-hidden" style={{
+      <section className="relative py-24 md:py-32 overflow-hidden" style={{
         backgroundImage: "url('https://images.unsplash.com/photo-1579952363873-27f3bade9f55?q=80&w=2070&auto=format&fit=crop')",
         backgroundSize: "cover",
         backgroundPosition: "center"
@@ -109,10 +109,7 @@ export default function ContactPage() {
         <div className="absolute inset-0 bg-primary-600/75"></div>
         <div className="container-custom relative z-10">
           <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-3xl md:text-4xl font-bold mb-4 text-white" style={{fontFamily: 'Playfair Display'}}>Contact Us</h1>
-            <p className="text-lg md:text-xl text-white/90">
-              Visit us at Baba Yara Sports Stadium or get in touch. We're here to answer your questions and help you get involved.
-            </p>
+            <h1 className="text-4xl md:text-5xl font-bold text-white" style={{fontFamily: 'Playfair Display'}}>Contact</h1>
           </div>
         </div>
       </section>

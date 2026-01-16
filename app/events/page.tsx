@@ -88,7 +88,7 @@ export default function EventsPage() {
         }}
       />
       <div>
-      <section className="relative py-16 md:py-24 overflow-hidden" style={{
+      <section className="relative py-24 md:py-32 overflow-hidden" style={{
         backgroundImage: "url('https://images.unsplash.com/photo-1579952363873-27f3bade9f55?q=80&w=2070&auto=format&fit=crop')",
         backgroundSize: "cover",
         backgroundPosition: "center"
@@ -96,10 +96,7 @@ export default function EventsPage() {
         <div className="absolute inset-0 bg-primary-600/75"></div>
         <div className="container-custom relative z-10">
           <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-3xl md:text-4xl font-bold mb-4 text-white" style={{fontFamily: 'Playfair Display'}}>Events</h1>
-            <p className="text-lg md:text-xl text-white/90">
-              Connect with fellow supporters and get involved in NASSU activities
-            </p>
+            <h1 className="text-4xl md:text-5xl font-bold text-white" style={{fontFamily: 'Playfair Display'}}>Events</h1>
           </div>
         </div>
       </section>
@@ -182,12 +179,12 @@ export default function EventsPage() {
 
                     {/* CTA */}
                     <div className="pt-2">
-                      <button className="inline-flex items-center bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-8 rounded-xl transition-all duration-200 shadow-lg hover:shadow-xl hover:-translate-y-0.5 active:scale-95">
+                      <a href="/contact" className="inline-flex items-center bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-8 rounded-xl transition-all duration-200 shadow-lg hover:shadow-xl hover:-translate-y-0.5 active:scale-95">
                         Join Us at the World Cup
                         <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6"/>
                         </svg>
-                      </button>
+                      </a>
                     </div>
                   </div>
                 </div>
