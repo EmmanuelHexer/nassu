@@ -107,8 +107,19 @@ export function Footer() {
         </div>
 
         <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400 text-sm">
-          <p>
+          <p className="mb-2">
             &copy; {currentYear} NASSU - National Sports Supporters Union. All rights reserved.
+          </p>
+          <p className="text-xs">
+            Developed by{' '}
+            <a
+              href="https://hexerize.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gold-400 hover:text-gold-500 transition-colors duration-200 font-semibold"
+            >
+              Hexerize
+            </a>
           </p>
         </div>
       </div>
