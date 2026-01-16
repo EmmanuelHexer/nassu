@@ -1,10 +1,10 @@
-# NASSU - National Sports Supporters Union
+# NASSU - National Sports Supporters Union (Ghana)
 
-A professional, SEO-optimized website for the National Sports Supporters Union built with Next.js 15 and Tailwind CSS 4.
+A professional, SEO-optimized website for Ghana's National Sports Supporters Union built with Next.js 15 and Tailwind CSS 4.
 
 ## Overview
 
-NASSU (National Sports Supporters Union) is an independent, democratic organization that gives sports fans a collective voice to influence clubs and advocate for supporter rights nationwide. This website serves as the primary digital presence for the organization.
+NASSU (National Sports Supporters Union) is Ghana's premier independent, democratic organization that unites football supporters from Accra to Kumasi, giving fans a collective voice to influence clubs, advocate for supporter rights, and fight for fair treatment across Ghanaian football. This website serves as the primary digital presence for the organization.
 
 ## Tech Stack
 
@@ -18,11 +18,11 @@ NASSU (National Sports Supporters Union) is an independent, democratic organizat
 
 ### Core Pages
 
-- **Home:** Hero section with call-to-action, statistics, feature cards, and membership promotion
-- **About:** Organization mission, values, leadership team, and how the union operates
-- **Membership:** Membership tiers with pricing, benefits, and signup process
-- **News:** Latest updates, campaign wins, and announcements
-- **Events:** Upcoming and past events with RSVP functionality
+- **Home:** Modern hero section with Ghana-specific messaging, recent campaign victories, supporter testimonials, and compelling CTAs
+- **About:** Organization mission, values, leadership team, and advocacy approach
+- **Membership:** Membership tiers with pricing (GH₵), benefits, and signup process
+- **News:** Latest updates from GPL campaigns, advocacy wins, and announcements
+- **Events:** Upcoming supporter meetups, watch parties, and past events
 - **Contact:** Multi-channel contact options, department directory, and contact form
 
 ### Technical Features
@@ -138,7 +138,7 @@ The site is optimized for deployment on:
 Create a `.env.local` file for environment-specific configuration:
 
 ```env
-NEXT_PUBLIC_SITE_URL=https://nassu.org
+NEXT_PUBLIC_SITE_URL=https://nassuashanti.com
 NEXT_PUBLIC_GA_ID=your-google-analytics-id
 ```
 
@@ -215,12 +215,12 @@ Copyright 2026 NASSU - National Sports Supporters Union. All rights reserved.
 
 ## Contact
 
-- Website: https://nassu.org
-- Email: info@nassu.org
-- Twitter: @nassu
-- Facebook: facebook.com/nassu
-- Instagram: @nassu
+- Website: https://nassuashanti.com
+- Email: nassu.blackstars@gmail.com
+- Twitter: @nassu_ghana
+- Facebook: facebook.com/nassuashanti
+- Instagram: @nassuashanti
 
 ---
 
-Built with Next.js 15, Tailwind CSS 4, and modern web technologies.
+Built with Next.js 15, Tailwind CSS 4, and modern web technologies for Ghana's football supporters.
