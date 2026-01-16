@@ -17,9 +17,9 @@ export function Navbar() {
   ];
 
   return (
-    <nav className="fixed top-0 w-full z-50 py-0 md:py-4">
+    <nav className="fixed top-0 w-full z-50 py-0 md:py-2">
       <div className="container mx-auto px-0 md:px-4">
-        <div className="clean-card rounded-b-2xl md:rounded-2xl shadow-premium px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 py-2 md:py-5 border-0 md:border border-gray-100 transition-all duration-300">
+        <div className="clean-card rounded-b-2xl md:rounded-2xl shadow-premium px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 py-2 md:py-3 border-0 md:border border-gray-100 transition-all duration-300">
           <div className="flex justify-between items-center">
             <Link href="/" className="flex items-center space-x-3 group">
               <div className="relative w-10 h-10 transition-transform duration-300 group-hover:scale-105">

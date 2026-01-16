@@ -43,55 +43,34 @@ export default function MembershipPage() {
 
   const tiers = [
     {
-      name: "Standard Membership",
-      price: "$25",
-      period: "per year",
+      name: "NASSU Membership",
+      price: "GH₵2500",
+      period: "registration fee + GH₵50/month",
       features: [
         "Full voting rights",
         "Regular updates and newsletters",
         "Access to member forums",
         "Invitation to member events",
         "Campaign participation",
-      ],
-      recommended: false,
-    },
-    {
-      name: "Supporter Plus",
-      price: "$50",
-      period: "per year",
-      features: [
-        "All Standard benefits",
-        "Priority event registration",
-        "Exclusive merchandise discount",
-        "Quarterly leadership Q&A sessions",
-        "Early campaign access",
+        "Direct representation",
       ],
       recommended: true,
-    },
-    {
-      name: "Champion Member",
-      price: "$100",
-      period: "per year",
-      features: [
-        "All Supporter Plus benefits",
-        "Recognition on website",
-        "Annual appreciation event",
-        "Direct line to board members",
-        "Special advocate badge",
-      ],
-      recommended: false,
     },
   ];
 
   return (
     <div>
-      <section className="bg-linear-to-br from-primary-600 to-primary-800 text-white py-16 md:py-24">
-        <div className="container-custom">
-          <div className="max-w-3xl">
-            <h1 className="heading-xl mb-6">Become a Member</h1>
-            <p className="text-xl md:text-2xl text-primary-100">
-              Join thousands of supporters making their voices heard and shaping
-              the future of sports
+      <section className="relative py-16 md:py-24 overflow-hidden" style={{
+        backgroundImage: "url('https://images.unsplash.com/photo-1579952363873-27f3bade9f55?q=80&w=2070&auto=format&fit=crop')",
+        backgroundSize: "cover",
+        backgroundPosition: "center"
+      }}>
+        <div className="absolute inset-0 bg-primary-600/75"></div>
+        <div className="container-custom relative z-10">
+          <div className="max-w-3xl mx-auto text-center">
+            <h1 className="text-3xl md:text-4xl font-bold mb-4 text-white" style={{fontFamily: 'Playfair Display'}}>Become a Member</h1>
+            <p className="text-lg md:text-xl text-white/90">
+              Join thousands of supporters making their voices heard and shaping the future of sports
             </p>
           </div>
         </div>

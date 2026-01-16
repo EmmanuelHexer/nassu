@@ -55,12 +55,19 @@ export default function AboutPage() {
 
   return (
     <div>
-      <section className="bg-linear-to-br from-primary-600 to-primary-800 text-white py-16 md:py-24">
-        <div className="container-custom">
-          <h1 className="heading-xl mb-6">About NASSU</h1>
-          <p className="text-xl md:text-2xl text-primary-100 max-w-3xl">
-            The independent voice of sports supporters nationwide
-          </p>
+      <section className="relative py-16 md:py-24 overflow-hidden" style={{
+        backgroundImage: "url('https://images.unsplash.com/photo-1579952363873-27f3bade9f55?q=80&w=2070&auto=format&fit=crop')",
+        backgroundSize: "cover",
+        backgroundPosition: "center"
+      }}>
+        <div className="absolute inset-0 bg-primary-600/75"></div>
+        <div className="container-custom relative z-10">
+          <div className="max-w-3xl mx-auto text-center">
+            <h1 className="text-3xl md:text-4xl font-bold mb-4 text-white" style={{fontFamily: 'Playfair Display'}}>About NASSU</h1>
+            <p className="text-lg md:text-xl text-white/90">
+              The independent voice of sports supporters nationwide
+            </p>
+          </div>
         </div>
       </section>
 
