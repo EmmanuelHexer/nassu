@@ -320,114 +320,89 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Features Section - Premium Alternating Layout */}
-      <section className="section-padding bg-gradient-to-b from-white to-gray-50 relative overflow-hidden">
-        {/* Decorative Background Elements */}
-        <div className="absolute top-0 left-0 w-96 h-96 bg-primary-600/5 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2"></div>
-        <div className="absolute bottom-0 right-0 w-96 h-96 bg-green-600/5 rounded-full blur-3xl translate-x-1/2 translate-y-1/2"></div>
-
-        <div className="container-custom relative z-10">
-          <div className="text-center mb-16 md:mb-24">
-            <div className="inline-flex items-center bg-primary-600/10 backdrop-blur-sm px-6 py-2.5 rounded-full mb-6 border border-primary-600/20">
-              <span className="text-primary-600 font-bold text-sm uppercase tracking-wider">What We Fight For</span>
-            </div>
-            <h2 className="text-display text-4xl md:text-5xl lg:text-6xl text-gray-900 mb-6 max-w-4xl mx-auto leading-tight" style={{fontFamily: 'Playfair Display'}}>
+      {/* Features Section - Clean Typography-Led Design */}
+      <section className="py-24 md:py-32 bg-white">
+        <div className="container-custom max-w-6xl">
+          <div className="mb-20 md:mb-32 text-center mx-auto max-w-4xl">
+            <p className="text-primary-600 font-semibold text-sm uppercase tracking-wider mb-6">What We Fight For</p>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight" style={{fontFamily: 'Playfair Display'}}>
               Why Ashanti Supporters Choose NASSU
             </h2>
-            <p className="text-body-premium text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-lg md:text-xl text-gray-600 leading-relaxed">
               From Baba Yara Stadium to every corner of Kumasi, we're fighting for the rights and dignity of every Ashanti football supporter.
             </p>
           </div>
 
-          {/* Alternating Feature Items */}
-          <div className="max-w-6xl mx-auto space-y-16 md:space-y-24">
+          {/* Simple Two-Column Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-20 gap-y-16 md:gap-y-20">
             {features.map((feature, index) => (
-              <div key={index} className={`flex flex-col ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'} gap-8 md:gap-16 items-center group`}>
-                {/* Icon Side */}
-                <div className="flex-shrink-0 w-full md:w-2/5">
-                  <div className="relative">
-                    {/* Large Decorative Background */}
-                    <div className="absolute -inset-4 bg-gradient-to-br from-primary-600/10 via-gold-400/10 to-green-600/10 rounded-3xl blur-2xl group-hover:blur-3xl transition-all duration-500 opacity-50 group-hover:opacity-100"></div>
-
-                    {/* Icon Container */}
-                    <div className="relative bg-white border-2 border-gray-100 group-hover:border-primary-600/30 rounded-3xl p-12 md:p-16 shadow-lg group-hover:shadow-2xl transition-all duration-500 group-hover:scale-105">
-                      <div className="flex items-center justify-center text-primary-600 group-hover:scale-110 group-hover:rotate-6 transition-all duration-500">
-                        {feature.icon}
-                      </div>
-
-                      {/* Floating Number Badge */}
-                      <div className="absolute -top-4 -right-4 w-12 h-12 bg-gradient-to-br from-primary-600 to-green-600 text-white rounded-2xl flex items-center justify-center font-bold text-xl shadow-lg group-hover:scale-110 transition-transform duration-500" style={{fontFamily: 'Playfair Display'}}>
-                        {index + 1}
-                      </div>
-
-                      {/* Ghana Colors Accent Lines */}
-                      <div className="absolute bottom-0 left-0 w-full h-1.5 bg-gradient-to-r from-primary-600 via-gold-400 to-green-600 rounded-b-3xl transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-700"></div>
-                    </div>
+              <div key={index} className="group">
+                <div className="flex items-start gap-5 mb-5">
+                  <div className="flex-shrink-0 w-10 h-10 flex items-center justify-center text-primary-600 mt-1">
+                    {feature.icon}
                   </div>
-                </div>
-
-                {/* Content Side */}
-                <div className="flex-1 text-center md:text-left">
-                  <h3 className="text-3xl md:text-4xl font-bold mb-4 md:mb-6 text-gray-900 group-hover:text-primary-600 transition-colors duration-300" style={{fontFamily: 'Playfair Display'}}>
+                  <h3 className="text-2xl md:text-3xl font-bold text-gray-900 leading-tight flex-1" style={{fontFamily: 'Playfair Display'}}>
                     {feature.title}
                   </h3>
-                  <div className="w-20 h-1 bg-gradient-to-r from-primary-600 via-gold-400 to-green-600 mb-4 md:mb-6 mx-auto md:mx-0 group-hover:w-32 transition-all duration-500"></div>
-                  <p className="text-body-premium text-lg md:text-xl text-gray-600 group-hover:text-gray-700 leading-relaxed transition-colors duration-300">
-                    {feature.description}
-                  </p>
                 </div>
+                <p className="text-base md:text-lg text-gray-600 leading-relaxed pl-15">
+                  {feature.description}
+                </p>
+                <div className="w-12 h-px bg-primary-600 mt-6 ml-15 group-hover:w-24 transition-all duration-300"></div>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Recent Wins Section - Premium Parallax */}
-      <section className="section-padding parallax-bg relative overflow-hidden" style={{
+      {/* Recent Wins Section - Clean Apple-Inspired */}
+      <section className="py-24 md:py-32 parallax-bg relative overflow-hidden" style={{
         backgroundImage: "url('https://images.unsplash.com/photo-1579952363873-27f3bade9f55?q=80&w=2070&auto=format&fit=crop')"
       }}>
-        <div className="gradient-overlay-ghana"></div>
+        <div className="absolute inset-0 bg-black/60"></div>
 
-        {/* Animated Background Accent */}
-        <div className="absolute top-1/4 left-0 w-72 h-72 bg-gold-400/20 rounded-full blur-3xl animate-pulse"></div>
-
-        <div className="container-custom relative z-10">
-          <div className="text-center mb-16 md:mb-20">
-            <div className="inline-flex items-center bg-gold-400/20 backdrop-blur-sm px-6 py-2.5 rounded-full mb-6 border border-gold-400/30">
-              <span className="text-gold-400 font-bold text-sm uppercase tracking-wider">Recent Victories</span>
-            </div>
-            <h2 className="text-display text-4xl md:text-5xl lg:text-6xl text-white mb-6 text-shadow-premium max-w-4xl mx-auto leading-tight" style={{fontFamily: 'Playfair Display'}}>
+        <div className="container-custom relative z-10 max-w-5xl">
+          <div className="text-center mb-20 md:mb-24 mx-auto max-w-3xl">
+            <p className="text-gold-400 font-semibold text-sm uppercase tracking-wider mb-6">Recent Victories</p>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight" style={{fontFamily: 'Playfair Display'}}>
               Making Real Change
             </h2>
-            <p className="text-body-premium text-lg md:text-xl text-white/95 max-w-3xl mx-auto leading-relaxed" style={{textShadow: "0 2px 4px rgba(0,0,0,0.3)"}}>
+            <p className="text-lg md:text-xl text-white/90 leading-relaxed">
               Through collective action and strategic advocacy, we've secured major wins for supporters across the Ashanti Region.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 max-w-6xl mx-auto">
+          {/* Clean Numbered List */}
+          <div className="space-y-12 md:space-y-16">
             {recentWins.map((win, index) => (
-              <div key={index} className="relative clean-card p-8 md:p-10 rounded-3xl shadow-xl hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 group border border-white/20 hover:border-gold-400/60 overflow-hidden">
-                {/* Premium Gold Accent Bar */}
-                <div className="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-gold-400 via-gold-500 to-gold-400 transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
-
-                {/* Date Badge */}
-                <div className="inline-flex items-center bg-gold-400/20 backdrop-blur-sm px-4 py-1.5 rounded-full mb-5 border border-gold-400/30">
-                  <span className="text-gold-400 text-xs md:text-sm font-bold group-hover:scale-105 transition-transform duration-200">{win.date}</span>
+              <div key={index} className="flex gap-8 md:gap-12 group">
+                {/* Number */}
+                <div className="flex-shrink-0">
+                  <div className="w-12 h-12 md:w-14 md:h-14 rounded-full bg-white/10 backdrop-blur-sm flex items-center justify-center">
+                    <span className="text-white font-bold text-xl md:text-2xl" style={{fontFamily: 'Playfair Display'}}>{index + 1}</span>
+                  </div>
                 </div>
 
-                <h3 className="text-2xl md:text-2xl font-bold mb-4 text-gray-900 group-hover:text-primary-600 transition-colors duration-300" style={{fontFamily: 'Playfair Display'}}>{win.title}</h3>
-                <p className="text-body-premium text-gray-700 group-hover:text-gray-800 leading-relaxed transition-colors duration-300">{win.description}</p>
-
-                {/* Corner Glow */}
-                <div className="absolute bottom-0 right-0 w-32 h-32 bg-gradient-to-tl from-gold-400/15 to-transparent rounded-tl-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                {/* Content */}
+                <div className="flex-1 pt-1">
+                  <div className="mb-3">
+                    <span className="text-gold-400 text-xs md:text-sm font-semibold uppercase tracking-wide">{win.date}</span>
+                  </div>
+                  <h3 className="text-2xl md:text-3xl font-bold text-white mb-4 leading-tight" style={{fontFamily: 'Playfair Display'}}>
+                    {win.title}
+                  </h3>
+                  <p className="text-base md:text-lg text-white/85 leading-relaxed">
+                    {win.description}
+                  </p>
+                </div>
               </div>
             ))}
           </div>
 
-          <div className="text-center mt-12 md:mt-16">
-            <Link href="/news" className="inline-flex items-center bg-gold-400/20 hover:bg-gold-400/30 backdrop-blur-sm border-2 border-gold-400/50 hover:border-gold-400 text-gold-400 hover:text-white font-bold text-lg px-8 py-4 rounded-xl group transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-1">
+          <div className="text-center mt-16 md:mt-20">
+            <Link href="/news" className="inline-flex items-center text-white hover:text-gold-400 font-semibold text-base group transition-colors duration-200">
               View All Campaign Victories
-              <svg className="w-5 h-5 ml-2 group-hover:translate-x-2 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
               </svg>
             </Link>
@@ -486,20 +461,20 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Final CTA - Premium Ghana Style */}
+      {/* Final CTA - Clean Style */}
       <section className="section-padding relative overflow-hidden" style={{
         backgroundImage: "url('/supporters.jpg')",
         backgroundSize: "cover",
         backgroundPosition: "center"
       }}>
-        <div className="absolute inset-0 bg-gradient-to-r from-primary-600/85 via-green-600/80 to-primary-600/85"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-primary-600/80 to-primary-600/90"></div>
 
         <div className="container-custom relative z-10">
           <div className="max-w-4xl mx-auto text-center text-white">
-            <h2 className="text-display text-4xl md:text-5xl font-bold mb-6 text-shadow-premium" style={{fontFamily: 'Playfair Display'}}>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight" style={{fontFamily: 'Playfair Display'}}>
               Ready to Stand With Ashanti Supporters?
             </h2>
-            <p className="text-body-premium text-xl md:text-2xl mb-10 leading-relaxed" style={{textShadow: "0 1px 3px rgba(0,0,0,0.2)"}}>
+            <p className="text-lg md:text-xl mb-10 leading-relaxed text-white/95">
               Join over 300 passionate Ashanti supporters fighting for fair treatment, affordable access, and a stronger voice in Kumasi football.
             </p>
 
