@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
@@ -21,18 +22,26 @@ export function Footer() {
       <div className="container-custom py-12 md:py-16">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-12">
           <div className="md:col-span-2">
-            <h3 className="text-white text-2xl font-bold mb-4">NASSU</h3>
+            <div className="flex items-center space-x-3 mb-4">
+              <div className="relative w-10 h-10">
+                <Image
+                  src="/logo.png"
+                  alt="NASSU Logo"
+                  fill
+                  className="object-contain"
+                />
+              </div>
+              <h3 className="text-white text-2xl font-bold">NASSU</h3>
+            </div>
             <p className="text-gray-400 mb-4 max-w-md">
-              The National Sports Supporters Union is an independent, democratic
-              organization giving sports fans a collective voice to influence
-              clubs and advocate for supporter rights.
+              The Ashanti Region's premier football supporters union based at Baba Yara Sports Stadium in Kumasi, uniting 300+ supporters for fair treatment and affordable access.
             </p>
             <div className="flex space-x-4">
               <a
-                href="https://twitter.com/nassu"
+                href="https://twitter.com/nassu_ghana"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:text-primary-400 transition-colors duration-200"
+                className="hover:text-gold-400 transition-colors duration-200"
                 aria-label="Twitter"
               >
                 <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
@@ -40,10 +49,10 @@ export function Footer() {
                 </svg>
               </a>
               <a
-                href="https://facebook.com/nassu"
+                href="https://facebook.com/nassuashanti"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:text-primary-400 transition-colors duration-200"
+                className="hover:text-gold-400 transition-colors duration-200"
                 aria-label="Facebook"
               >
                 <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
@@ -51,10 +60,10 @@ export function Footer() {
                 </svg>
               </a>
               <a
-                href="https://instagram.com/nassu"
+                href="https://instagram.com/nassuashanti"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:text-primary-400 transition-colors duration-200"
+                className="hover:text-gold-400 transition-colors duration-200"
                 aria-label="Instagram"
               >
                 <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">

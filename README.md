@@ -1,10 +1,10 @@
-# NASSU - National Sports Supporters Union (Ghana)
+# NASSU - National Sports Supporters Union (Ashanti Region)
 
-A professional, SEO-optimized website for Ghana's National Sports Supporters Union built with Next.js 15 and Tailwind CSS 4.
+A professional, SEO-optimized website for the Ashanti Region's National Sports Supporters Union built with Next.js 15 and Tailwind CSS 4.
 
 ## Overview
 
-NASSU (National Sports Supporters Union) is Ghana's premier independent, democratic organization that unites football supporters from Accra to Kumasi, giving fans a collective voice to influence clubs, advocate for supporter rights, and fight for fair treatment across Ghanaian football. This website serves as the primary digital presence for the organization.
+NASSU (National Sports Supporters Union) is the Ashanti Region's premier independent, democratic organization based at Baba Yara Sports Stadium in Kumasi. We unite football supporters across the Ashanti Region, giving fans a collective voice to influence clubs, advocate for supporter rights, and fight for fair treatment in Ghanaian football. This website serves as the primary digital presence for the organization.
 
 ## Tech Stack
 

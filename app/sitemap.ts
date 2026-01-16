@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://nassu.org'
+  const baseUrl = 'https://nassuashanti.com'
 
   return [
     {

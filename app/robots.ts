@@ -8,7 +8,12 @@ export default function robots(): MetadataRoute.Robots {
         allow: '/',
         disallow: ['/api/', '/admin/'],
       },
+      {
+        userAgent: 'Googlebot',
+        allow: '/',
+        crawlDelay: 0,
+      },
     ],
-    sitemap: 'https://nassu.org/sitemap.xml',
+    sitemap: 'https://nassuashanti.com/sitemap.xml',
   }
 }
