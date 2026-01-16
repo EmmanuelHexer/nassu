@@ -86,28 +86,29 @@ export default function EventsPage() {
         </div>
       </section>
 
-      <section className="section-padding">
+      <section className="py-20 md:py-28">
         <div className="container-custom">
-          <h2 className="heading-md mb-12">Upcoming Events</h2>
-          <div className="grid grid-cols-1 gap-8 max-w-5xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold mb-12" style={{fontFamily: 'Playfair Display'}}>Upcoming Events</h2>
+          <div className="w-12 h-1 bg-primary-600 mb-12"></div>
+          <div className="grid grid-cols-1 gap-12 max-w-5xl mx-auto">
             {upcomingEvents.map((event, index) => (
               <div
                 key={index}
-                className="bg-white border-2 border-gray-200 rounded-xl p-8 hover:border-primary-400 hover:shadow-lg transition-all duration-300"
+                className="border-l-4 border-primary-600 pl-8 py-4"
               >
                 <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-4">
                   <div>
-                    <div className="flex items-center gap-3 mb-2">
-                      <span className="text-sm font-semibold px-3 py-1 rounded-full bg-primary-100 text-primary-700">
+                    <div className="flex items-center gap-3 mb-4">
+                      <span className="text-sm font-semibold px-4 py-1 bg-primary-600 text-white tracking-wide uppercase">
                         {event.type}
                       </span>
                       {event.rsvpRequired && (
-                        <span className="text-xs font-semibold px-3 py-1 rounded-full bg-yellow-100 text-yellow-800">
+                        <span className="text-xs font-semibold px-4 py-1 bg-yellow-100 text-yellow-800 tracking-wide uppercase">
                           RSVP Required
                         </span>
                       )}
                     </div>
-                    <h3 className="text-2xl font-bold text-gray-900 mb-2">
+                    <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2" style={{fontFamily: 'Playfair Display'}}>
                       {event.title}
                     </h3>
                   </div>
@@ -129,8 +130,8 @@ export default function EventsPage() {
                       />
                     </svg>
                     <div>
-                      <p className="font-semibold text-gray-900">{event.date}</p>
-                      <p className="text-gray-600 text-sm">{event.time}</p>
+                      <p className="font-semibold text-gray-900 text-lg">{event.date}</p>
+                      <p className="text-gray-600">{event.time}</p>
                     </div>
                   </div>
 
@@ -154,15 +155,15 @@ export default function EventsPage() {
                         d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
                       />
                     </svg>
-                    <p className="text-gray-700">{event.location}</p>
+                    <p className="text-gray-700 text-lg">{event.location}</p>
                   </div>
                 </div>
 
-                <p className="text-gray-600 mb-6 leading-relaxed">
+                <p className="text-gray-600 mb-6 leading-relaxed text-lg">
                   {event.description}
                 </p>
 
-                <button className="btn-primary">
+                <button className="btn-primary tracking-wide uppercase">
                   {event.rsvpRequired ? "RSVP Now" : "Learn More"}
                 </button>
               </div>
@@ -171,84 +172,87 @@ export default function EventsPage() {
         </div>
       </section>
 
-      <section className="section-padding bg-gray-50">
+      <section className="py-20 md:py-28 bg-gray-50">
         <div className="container-custom">
-          <h2 className="heading-md mb-12">Past Events</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold mb-12" style={{fontFamily: 'Playfair Display'}}>Past Events</h2>
+          <div className="w-12 h-1 bg-primary-600 mb-12"></div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {pastEvents.map((event, index) => (
               <div
                 key={index}
-                className="bg-white p-6 rounded-lg shadow-md border border-gray-200"
+                className="bg-white p-6 border-l-2 border-primary-600"
               >
-                <p className="text-sm text-gray-500 mb-2">{event.date}</p>
-                <h3 className="text-lg font-bold text-gray-900 mb-2">
+                <p className="text-sm text-gray-500 mb-3 tracking-wide uppercase">{event.date}</p>
+                <h3 className="text-xl font-bold text-gray-900 mb-3" style={{fontFamily: 'Playfair Display'}}>
                   {event.title}
                 </h3>
-                <p className="text-gray-600 text-sm">{event.description}</p>
+                <p className="text-gray-600">{event.description}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="section-padding">
+      <section className="py-20 md:py-28">
         <div className="container-custom">
-          <div className="max-w-4xl mx-auto bg-primary-600 text-white rounded-2xl p-12 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+          <div className="max-w-4xl mx-auto bg-primary-600 text-white p-16 text-center border-t-8 border-gray-900">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6" style={{fontFamily: 'Playfair Display'}}>
               Want to Host an Event?
             </h2>
-            <p className="text-xl text-primary-100 mb-8">
+            <div className="w-12 h-1 bg-white mx-auto mb-6"></div>
+            <p className="text-xl text-white/90 mb-8">
               NASSU members can propose and organize regional events, local
               supporter meetups, and advocacy workshops. Get in touch to discuss
               your ideas.
             </p>
-            <button className="bg-white hover:bg-gray-100 text-primary-600 font-semibold py-3 px-8 rounded-lg transition-colors duration-200 inline-block">
+            <button className="bg-white hover:bg-gray-100 text-primary-600 font-semibold py-3 px-8 transition-colors duration-200 inline-block tracking-wide uppercase">
               Contact Events Team
             </button>
           </div>
         </div>
       </section>
 
-      <section className="section-padding bg-gray-50">
+      <section className="py-20 md:py-28 bg-gray-50">
         <div className="container-custom">
           <div className="max-w-4xl mx-auto">
-            <h2 className="heading-md mb-8 text-center">Event Information</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div className="bg-white p-6 rounded-lg border border-gray-200">
-                <h3 className="text-lg font-bold text-gray-900 mb-3">
+            <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center" style={{fontFamily: 'Playfair Display'}}>Event Information</h2>
+            <div className="w-12 h-1 bg-primary-600 mx-auto mb-12"></div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div className="bg-white p-8 border-l-2 border-primary-600">
+                <h3 className="text-xl font-bold text-gray-900 mb-3" style={{fontFamily: 'Playfair Display'}}>
                   Member Events
                 </h3>
-                <p className="text-gray-600">
+                <p className="text-gray-600 text-lg">
                   Most events are exclusive to NASSU members. If you're not yet a
                   member, join today to access all events and activities.
                 </p>
               </div>
 
-              <div className="bg-white p-6 rounded-lg border border-gray-200">
-                <h3 className="text-lg font-bold text-gray-900 mb-3">
+              <div className="bg-white p-8 border-l-2 border-primary-600">
+                <h3 className="text-xl font-bold text-gray-900 mb-3" style={{fontFamily: 'Playfair Display'}}>
                   Event Updates
                 </h3>
-                <p className="text-gray-600">
+                <p className="text-gray-600 text-lg">
                   Members receive email notifications about upcoming events. Check
                   your member portal regularly for the latest updates.
                 </p>
               </div>
 
-              <div className="bg-white p-6 rounded-lg border border-gray-200">
-                <h3 className="text-lg font-bold text-gray-900 mb-3">
+              <div className="bg-white p-8 border-l-2 border-primary-600">
+                <h3 className="text-xl font-bold text-gray-900 mb-3" style={{fontFamily: 'Playfair Display'}}>
                   Accessibility
                 </h3>
-                <p className="text-gray-600">
+                <p className="text-gray-600 text-lg">
                   All our venues are wheelchair accessible. Contact us in advance
                   if you have specific accessibility requirements.
                 </p>
               </div>
 
-              <div className="bg-white p-6 rounded-lg border border-gray-200">
-                <h3 className="text-lg font-bold text-gray-900 mb-3">
+              <div className="bg-white p-8 border-l-2 border-primary-600">
+                <h3 className="text-xl font-bold text-gray-900 mb-3" style={{fontFamily: 'Playfair Display'}}>
                   Virtual Options
                 </h3>
-                <p className="text-gray-600">
+                <p className="text-gray-600 text-lg">
                   Many events offer virtual attendance options for members who
                   cannot attend in person. Details provided with each event.
                 </p>

@@ -79,22 +79,22 @@ export default function ContactPage() {
   const departments = [
     {
       name: "Membership Inquiries",
-      email: "membership@nassu.org",
+      email: "nassu.blackstars@gmail.com",
       description: "Questions about joining, renewals, and member benefits",
     },
     {
       name: "Media & Press",
-      email: "press@nassu.org",
+      email: "nassu.blackstars@gmail.com",
       description: "Press releases, interviews, and media inquiries",
     },
     {
       name: "Campaigns",
-      email: "campaigns@nassu.org",
+      email: "nassu.blackstars@gmail.com",
       description: "Information about current campaigns and how to get involved",
     },
     {
       name: "Board Contact",
-      email: "board@nassu.org",
+      email: "nassu.blackstars@gmail.com",
       description: "Direct contact with NASSU board members",
     },
   ];
@@ -117,46 +117,47 @@ export default function ContactPage() {
         </div>
       </section>
 
-      <section className="section-padding">
+      <section className="py-20 md:py-28">
         <div className="container-custom">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-20">
             {contactMethods.map((method, index) => (
               <div
                 key={index}
-                className="bg-white p-8 rounded-xl shadow-lg text-center"
+                className="text-center"
               >
-                <div className="text-primary-600 flex justify-center mb-4">
+                <div className="text-primary-600 flex justify-center mb-6">
                   {method.icon}
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-2">
+                <h3 className="text-xl font-bold text-gray-900 mb-3" style={{fontFamily: 'Playfair Display'}}>
                   {method.title}
                 </h3>
-                <p className="text-primary-600 font-semibold mb-2">
+                <div className="w-12 h-1 bg-primary-600 mx-auto mb-4"></div>
+                <p className="text-primary-600 font-semibold mb-2 text-lg">
                   {method.details}
                 </p>
-                <p className="text-gray-600 text-sm">{method.description}</p>
+                <p className="text-gray-600">{method.description}</p>
               </div>
             ))}
           </div>
 
           <div className="max-w-4xl mx-auto">
-            <h2 className="heading-md mb-8 text-center">Department Contacts</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center" style={{fontFamily: 'Playfair Display'}}>Department Contacts</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {departments.map((dept, index) => (
                 <div
                   key={index}
-                  className="bg-gray-50 p-6 rounded-lg border border-gray-200"
+                  className="border-l-2 border-primary-600 pl-6"
                 >
-                  <h3 className="text-lg font-bold text-gray-900 mb-2">
+                  <h3 className="text-xl font-bold text-gray-900 mb-3" style={{fontFamily: 'Playfair Display'}}>
                     {dept.name}
                   </h3>
                   <a
                     href={`mailto:${dept.email}`}
-                    className="text-primary-600 hover:text-primary-700 font-medium mb-2 block"
+                    className="text-primary-600 hover:text-primary-700 font-medium mb-2 block text-lg"
                   >
                     {dept.email}
                   </a>
-                  <p className="text-gray-600 text-sm">{dept.description}</p>
+                  <p className="text-gray-600">{dept.description}</p>
                 </div>
               ))}
             </div>
@@ -164,17 +165,17 @@ export default function ContactPage() {
         </div>
       </section>
 
-      <section className="section-padding bg-gray-50">
+      <section className="py-20 md:py-28 bg-gray-50">
         <div className="container-custom">
           <div className="max-w-3xl mx-auto">
-            <h2 className="heading-md mb-8 text-center">Send Us a Message</h2>
-            <div className="bg-white p-8 rounded-xl shadow-lg">
+            <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center" style={{fontFamily: 'Playfair Display'}}>Send Us a Message</h2>
+            <div className="bg-white p-8 md:p-12 border-t-2 border-primary-600">
               <form className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
                     <label
                       htmlFor="firstName"
-                      className="block text-sm font-semibold text-gray-700 mb-2"
+                      className="block text-sm font-semibold text-gray-700 mb-2 tracking-wide uppercase"
                     >
                       First Name
                     </label>
@@ -182,14 +183,14 @@ export default function ContactPage() {
                       type="text"
                       id="firstName"
                       name="firstName"
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+                      className="w-full px-4 py-3 border-b-2 border-gray-300 focus:border-primary-600 focus:outline-none transition-colors"
                       required
                     />
                   </div>
                   <div>
                     <label
                       htmlFor="lastName"
-                      className="block text-sm font-semibold text-gray-700 mb-2"
+                      className="block text-sm font-semibold text-gray-700 mb-2 tracking-wide uppercase"
                     >
                       Last Name
                     </label>
@@ -197,7 +198,7 @@ export default function ContactPage() {
                       type="text"
                       id="lastName"
                       name="lastName"
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+                      className="w-full px-4 py-3 border-b-2 border-gray-300 focus:border-primary-600 focus:outline-none transition-colors"
                       required
                     />
                   </div>
@@ -206,7 +207,7 @@ export default function ContactPage() {
                 <div>
                   <label
                     htmlFor="email"
-                    className="block text-sm font-semibold text-gray-700 mb-2"
+                    className="block text-sm font-semibold text-gray-700 mb-2 tracking-wide uppercase"
                   >
                     Email Address
                   </label>
@@ -214,7 +215,7 @@ export default function ContactPage() {
                     type="email"
                     id="email"
                     name="email"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+                    className="w-full px-4 py-3 border-b-2 border-gray-300 focus:border-primary-600 focus:outline-none transition-colors"
                     required
                   />
                 </div>
@@ -222,14 +223,14 @@ export default function ContactPage() {
                 <div>
                   <label
                     htmlFor="subject"
-                    className="block text-sm font-semibold text-gray-700 mb-2"
+                    className="block text-sm font-semibold text-gray-700 mb-2 tracking-wide uppercase"
                   >
                     Subject
                   </label>
                   <select
                     id="subject"
                     name="subject"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+                    className="w-full px-4 py-3 border-b-2 border-gray-300 focus:border-primary-600 focus:outline-none transition-colors"
                     required
                   >
                     <option value="">Select a topic</option>
@@ -244,7 +245,7 @@ export default function ContactPage() {
                 <div>
                   <label
                     htmlFor="message"
-                    className="block text-sm font-semibold text-gray-700 mb-2"
+                    className="block text-sm font-semibold text-gray-700 mb-2 tracking-wide uppercase"
                   >
                     Message
                   </label>
@@ -252,7 +253,7 @@ export default function ContactPage() {
                     id="message"
                     name="message"
                     rows={6}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent resize-none"
+                    className="w-full px-4 py-3 border-b-2 border-gray-300 focus:border-primary-600 focus:outline-none transition-colors resize-none"
                     required
                   ></textarea>
                 </div>
@@ -274,57 +275,57 @@ export default function ContactPage() {
 
                 <button
                   type="submit"
-                  className="w-full bg-primary-600 hover:bg-primary-700 text-white font-semibold py-4 px-6 rounded-lg transition-colors duration-200"
+                  className="w-full bg-primary-600 hover:bg-primary-700 text-white font-semibold py-4 px-6 transition-colors duration-200 tracking-wide uppercase"
                 >
                   Send Message
                 </button>
               </form>
             </div>
 
-            <p className="text-center text-gray-600 mt-6">
+            <p className="text-center text-gray-600 mt-8 text-lg">
               We typically respond within 24-48 hours during business days.
             </p>
           </div>
         </div>
       </section>
 
-      <section className="section-padding">
+      <section className="py-20 md:py-28">
         <div className="container-custom">
           <div className="max-w-4xl mx-auto">
-            <h2 className="heading-md mb-8 text-center">
+            <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center" style={{fontFamily: 'Playfair Display'}}>
               Frequently Asked Questions
             </h2>
-            <div className="space-y-6">
-              <div className="bg-gray-50 p-6 rounded-lg">
-                <h3 className="text-lg font-bold text-gray-900 mb-2">
+            <div className="space-y-8">
+              <div className="border-l-2 border-primary-600 pl-6">
+                <h3 className="text-xl font-bold text-gray-900 mb-3" style={{fontFamily: 'Playfair Display'}}>
                   How long does it take to process membership applications?
                 </h3>
-                <p className="text-gray-600">
+                <p className="text-gray-600 text-lg">
                   Most membership applications are processed within 48 hours. You
                   will receive a confirmation email with your membership details
                   and welcome package.
                 </p>
               </div>
 
-              <div className="bg-gray-50 p-6 rounded-lg">
-                <h3 className="text-lg font-bold text-gray-900 mb-2">
+              <div className="border-l-2 border-primary-600 pl-6">
+                <h3 className="text-xl font-bold text-gray-900 mb-3" style={{fontFamily: 'Playfair Display'}}>
                   Can I attend meetings if I'm not a member?
                 </h3>
-                <p className="text-gray-600">
+                <p className="text-gray-600 text-lg">
                   General meetings are open to all supporters, but only members
                   have voting rights and access to exclusive member events and
                   forums.
                 </p>
               </div>
 
-              <div className="bg-gray-50 p-6 rounded-lg">
-                <h3 className="text-lg font-bold text-gray-900 mb-2">
+              <div className="border-l-2 border-primary-600 pl-6">
+                <h3 className="text-xl font-bold text-gray-900 mb-3" style={{fontFamily: 'Playfair Display'}}>
                   How can I get involved in campaigns?
                 </h3>
-                <p className="text-gray-600">
+                <p className="text-gray-600 text-lg">
                   Members receive regular updates about active campaigns and
                   opportunities to participate. You can also email
-                  campaigns@nassu.org to learn about current initiatives.
+                  nassu.blackstars@gmail.com to learn about current initiatives.
                 </p>
               </div>
             </div>

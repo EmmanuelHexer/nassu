@@ -76,44 +76,28 @@ export default function MembershipPage() {
         </div>
       </section>
 
-      <section className="section-padding">
+      <section className="py-20 md:py-28">
         <div className="container-custom">
-          <div className="max-w-4xl mx-auto mb-16">
-            <h2 className="heading-md mb-6 text-center">Why Become a Member?</h2>
-            <p className="text-lg text-gray-700 text-center mb-12">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center" style={{fontFamily: 'Playfair Display'}}>Why Become a Member?</h2>
+            <div className="w-12 h-1 bg-primary-600 mx-auto mb-6"></div>
+            <p className="text-lg md:text-xl text-gray-700 text-center mb-16">
               NASSU membership is open to all sports supporters who believe in
               democratic representation and supporter rights. When you join, you
               become part of a powerful collective voice advocating for positive
               change.
             </p>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {benefits.map((benefit, index) => (
                 <div
                   key={index}
-                  className="flex items-start space-x-4 p-6 bg-gray-50 rounded-lg"
+                  className="border-l-2 border-primary-600 pl-6"
                 >
-                  <div className="shrink-0">
-                    <svg
-                      className="w-6 h-6 text-primary-600"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M5 13l4 4L19 7"
-                      />
-                    </svg>
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-bold text-gray-900 mb-2">
-                      {benefit.title}
-                    </h3>
-                    <p className="text-gray-600">{benefit.description}</p>
-                  </div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-3" style={{fontFamily: 'Playfair Display'}}>
+                    {benefit.title}
+                  </h3>
+                  <p className="text-gray-600 text-lg">{benefit.description}</p>
                 </div>
               ))}
             </div>
@@ -121,146 +105,105 @@ export default function MembershipPage() {
         </div>
       </section>
 
-      <section className="section-padding bg-gray-50">
+      <section className="py-20 md:py-28 bg-gray-50">
         <div className="container-custom">
-          <h2 className="heading-md mb-4 text-center">Membership Tiers</h2>
-          <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
-            Choose the membership level that works best for you. All tiers
-            include full voting rights and democratic participation.
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center" style={{fontFamily: 'Playfair Display'}}>Membership Investment</h2>
+          <div className="w-12 h-1 bg-primary-600 mx-auto mb-6"></div>
+          <p className="text-center text-gray-600 text-lg md:text-xl mb-16 max-w-2xl mx-auto">
+            All members receive full voting rights and democratic participation in NASSU activities
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {tiers.map((tier, index) => (
-              <div
-                key={index}
-                className={`bg-white rounded-2xl shadow-lg overflow-hidden ${
-                  tier.recommended ? "ring-4 ring-primary-500 relative" : ""
-                }`}
-              >
-                {tier.recommended && (
-                  <div className="bg-primary-600 text-white text-center py-2 font-semibold">
-                    Most Popular
-                  </div>
-                )}
-                <div className="p-8">
-                  <h3 className="text-2xl font-bold text-gray-900 mb-2">
-                    {tier.name}
-                  </h3>
-                  <div className="mb-6">
-                    <span className="text-4xl font-bold text-primary-600">
-                      {tier.price}
-                    </span>
-                    <span className="text-gray-600 ml-2">{tier.period}</span>
-                  </div>
-                  <ul className="space-y-4 mb-8">
-                    {tier.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-start">
-                        <svg
-                          className="w-5 h-5 text-primary-600 mr-3 shrink-0 mt-0.5"
-                          fill="none"
-                          stroke="currentColor"
-                          viewBox="0 0 24 24"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={2}
-                            d="M5 13l4 4L19 7"
-                          />
-                        </svg>
-                        <span className="text-gray-700">{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-                  <Link
-                    href="/contact"
-                    className={`block text-center font-semibold py-3 px-6 rounded-lg transition-colors duration-200 ${
-                      tier.recommended
-                        ? "bg-primary-600 hover:bg-primary-700 text-white"
-                        : "bg-gray-100 hover:bg-gray-200 text-gray-900"
-                    }`}
-                  >
-                    Select Plan
-                  </Link>
-                </div>
-              </div>
-            ))}
+          <div className="max-w-3xl mx-auto text-center mb-12">
+            <div className="mb-8">
+              <span className="text-5xl md:text-6xl font-bold text-primary-600" style={{fontFamily: 'Playfair Display'}}>
+                GH₵2500
+              </span>
+              <span className="text-gray-600 ml-2 text-xl">registration fee</span>
+            </div>
+            <div className="mb-12">
+              <span className="text-3xl md:text-4xl font-bold text-gray-900" style={{fontFamily: 'Playfair Display'}}>
+                + GH₵50
+              </span>
+              <span className="text-gray-600 ml-2 text-xl">per month</span>
+            </div>
           </div>
 
-          <div className="text-center mt-12">
-            <p className="text-gray-600 mb-4">
+          <div className="max-w-3xl mx-auto">
+            <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-8 text-center" style={{fontFamily: 'Playfair Display'}}>
+              What You Get
+            </h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+              {tiers[0].features.map((feature, featureIndex) => (
+                <div key={featureIndex} className="border-l-2 border-primary-600 pl-4">
+                  <span className="text-gray-700 text-lg">{feature}</span>
+                </div>
+              ))}
+            </div>
+            <div className="text-center">
+              <Link
+                href="/contact"
+                className="inline-flex items-center font-bold py-4 px-8 transition-colors duration-200 tracking-wide uppercase bg-primary-600 hover:bg-primary-700 text-white"
+              >
+                Join NASSU Today
+              </Link>
+            </div>
+          </div>
+
+          <div className="text-center mt-16">
+            <p className="text-gray-600 text-lg">
               Student and concession rates available. Contact us for details.
             </p>
           </div>
         </div>
       </section>
 
-      <section className="section-padding">
+      <section className="py-20 md:py-28">
         <div className="container-custom">
           <div className="max-w-3xl mx-auto">
-            <h2 className="heading-md mb-6">How to Join</h2>
-            <div className="bg-white border-2 border-gray-200 rounded-xl p-8">
-              <ol className="space-y-6">
-                <li className="flex items-start">
-                  <div className="shrink-0 w-8 h-8 bg-primary-600 text-white rounded-full flex items-center justify-center font-bold mr-4">
-                    1
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-bold text-gray-900 mb-2">
-                      Choose Your Tier
-                    </h3>
-                    <p className="text-gray-600">
-                      Select the membership level that best fits your needs and
-                      budget.
-                    </p>
-                  </div>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center" style={{fontFamily: 'Playfair Display'}}>How to Join</h2>
+            <div className="w-12 h-1 bg-primary-600 mx-auto mb-6"></div>
+            <div className="border-t-2 border-primary-600 pt-12 mt-12">
+              <ol className="space-y-8">
+                <li className="border-l-2 border-primary-600 pl-6">
+                  <h3 className="text-xl font-bold text-gray-900 mb-3" style={{fontFamily: 'Playfair Display'}}>
+                    1. Choose Your Tier
+                  </h3>
+                  <p className="text-gray-600 text-lg">
+                    Select the membership level that best fits your needs and
+                    budget.
+                  </p>
                 </li>
-                <li className="flex items-start">
-                  <div className="shrink-0 w-8 h-8 bg-primary-600 text-white rounded-full flex items-center justify-center font-bold mr-4">
-                    2
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-bold text-gray-900 mb-2">
-                      Complete Application
-                    </h3>
-                    <p className="text-gray-600">
-                      Fill out a simple online form with your details and
-                      preferred membership tier.
-                    </p>
-                  </div>
+                <li className="border-l-2 border-primary-600 pl-6">
+                  <h3 className="text-xl font-bold text-gray-900 mb-3" style={{fontFamily: 'Playfair Display'}}>
+                    2. Complete Application
+                  </h3>
+                  <p className="text-gray-600 text-lg">
+                    Fill out a simple online form with your details and
+                    preferred membership tier.
+                  </p>
                 </li>
-                <li className="flex items-start">
-                  <div className="shrink-0 w-8 h-8 bg-primary-600 text-white rounded-full flex items-center justify-center font-bold mr-4">
-                    3
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-bold text-gray-900 mb-2">
-                      Payment
-                    </h3>
-                    <p className="text-gray-600">
-                      Securely pay your annual membership fee through our payment
-                      portal.
-                    </p>
-                  </div>
+                <li className="border-l-2 border-primary-600 pl-6">
+                  <h3 className="text-xl font-bold text-gray-900 mb-3" style={{fontFamily: 'Playfair Display'}}>
+                    3. Payment
+                  </h3>
+                  <p className="text-gray-600 text-lg">
+                    Securely pay your annual membership fee through our payment
+                    portal.
+                  </p>
                 </li>
-                <li className="flex items-start">
-                  <div className="shrink-0 w-8 h-8 bg-primary-600 text-white rounded-full flex items-center justify-center font-bold mr-4">
-                    4
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-bold text-gray-900 mb-2">
-                      Welcome Package
-                    </h3>
-                    <p className="text-gray-600">
-                      Receive your membership confirmation and welcome materials
-                      within 48 hours.
-                    </p>
-                  </div>
+                <li className="border-l-2 border-primary-600 pl-6">
+                  <h3 className="text-xl font-bold text-gray-900 mb-3" style={{fontFamily: 'Playfair Display'}}>
+                    4. Welcome Package
+                  </h3>
+                  <p className="text-gray-600 text-lg">
+                    Receive your membership confirmation and welcome materials
+                    within 48 hours.
+                  </p>
                 </li>
               </ol>
 
-              <div className="mt-8 pt-8 border-t border-gray-200 text-center">
-                <Link href="/contact" className="btn-primary">
+              <div className="mt-12 pt-12 border-t-2 border-gray-200 text-center">
+                <Link href="/contact" className="inline-flex items-center bg-primary-600 hover:bg-primary-700 text-white font-bold py-3 px-8 transition-all duration-200 tracking-wide uppercase">
                   Start Your Membership
                 </Link>
               </div>
