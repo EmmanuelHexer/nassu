@@ -68,8 +68,55 @@ export default function EventsPage() {
     },
   ];
 
+  // Generate Event schema for upcoming events
+  const eventsSchema = {
+    "@context": "https://schema.org",
+    "@graph": upcomingEvents.map((event) => ({
+      "@type": "Event",
+      "name": event.title,
+      "description": event.description,
+      "startDate": new Date(`${event.date} ${event.time.split(' - ')[0]}`).toISOString(),
+      "endDate": new Date(`${event.date} ${event.time.split(' - ')[1]}`).toISOString(),
+      "eventStatus": "https://schema.org/EventScheduled",
+      "eventAttendanceMode": event.location.includes("Online") ? "https://schema.org/OnlineEventAttendanceMode" : "https://schema.org/OfflineEventAttendanceMode",
+      "location": event.location.includes("Online") ? {
+        "@type": "VirtualLocation",
+        "url": "https://nassuashanti.com/events"
+      } : {
+        "@type": "Place",
+        "name": event.location,
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Kumasi",
+          "addressRegion": "Ashanti Region",
+          "addressCountry": "GH"
+        }
+      },
+      "organizer": {
+        "@type": "Organization",
+        "name": "NASSU - National Sports Supporters Union",
+        "url": "https://nassuashanti.com"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "GHS",
+        "availability": "https://schema.org/InStock",
+        "url": "https://nassuashanti.com/membership"
+      }
+    }))
+  };
+
   return (
-    <div>
+    <>
+      {/* Structured Data for Events */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(eventsSchema),
+        }}
+      />
+      <div>
       <section className="relative py-16 md:py-24 overflow-hidden" style={{
         backgroundImage: "url('https://images.unsplash.com/photo-1579952363873-27f3bade9f55?q=80&w=2070&auto=format&fit=crop')",
         backgroundSize: "cover",
@@ -262,5 +309,6 @@ export default function EventsPage() {
         </div>
       </section>
     </div>
+    </>
   );
 }

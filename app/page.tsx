@@ -55,7 +55,7 @@ export default function Home() {
     "name": "NASSU - National Sports Supporters Union",
     "description": "Ashanti Region's premier football supporters union at Baba Yara Sports Stadium",
     "url": "https://nassuashanti.com",
-    "telephone": "+233-XXX-XXXXXX",
+    "telephone": "+233-20-311-6147",
     "email": "nassu.blackstars@gmail.com",
     "address": {
       "@type": "PostalAddress",
