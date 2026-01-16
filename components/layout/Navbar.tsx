@@ -3,9 +3,11 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
+import { usePathname } from "next/navigation";
 
 export function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const pathname = usePathname();
 
   const navLinks = [
     { href: "/", label: "Home" },
@@ -42,15 +44,22 @@ export function Navbar() {
             </Link>
 
             <div className="hidden lg:flex items-center space-x-6 transition-all duration-300">
-              {navLinks.map((link) => (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  className="text-primary-600 hover:text-gray-600 font-medium text-sm tracking-wide transition-all duration-300 relative nav-hover-effect"
-                >
-                  {link.label}
-                </Link>
-              ))}
+              {navLinks.map((link) => {
+                const isActive = pathname === link.href;
+                return (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    className={`font-medium text-sm tracking-wide transition-all duration-300 relative ${
+                      isActive
+                        ? 'text-primary-600 font-bold border-b-2 border-primary-600'
+                        : 'text-gray-700 hover:text-primary-600'
+                    }`}
+                  >
+                    {link.label}
+                  </Link>
+                );
+              })}
               <Link
                 href="/membership"
                 className="bg-primary-600 text-white hover:bg-primary-700 px-6 py-2.5 rounded-full font-medium text-sm tracking-wide transition-all duration-300 shadow-md hover:shadow-lg"
@@ -74,16 +83,19 @@ export function Navbar() {
 
       {isMenuOpen && (
         <div className="mobile-menu active lg:hidden">
-          {navLinks.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              className="mobile-menu-item"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              {link.label}
-            </Link>
-          ))}
+          {navLinks.map((link) => {
+            const isActive = pathname === link.href;
+            return (
+              <Link
+                key={link.href}
+                href={link.href}
+                className={`mobile-menu-item ${isActive ? 'bg-primary-50 text-primary-600 font-bold border-l-4 border-primary-600' : ''}`}
+                onClick={() => setIsMenuOpen(false)}
+              >
+                {link.label}
+              </Link>
+            );
+          })}
           <Link
             href="/membership"
             className="mobile-menu-item bg-primary-600 text-white hover:bg-primary-700"
