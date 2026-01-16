@@ -111,8 +111,9 @@ export default function Home() {
       description:
         "Campaigning for affordable tickets and accessible venues. Ending exploitative pricing that locks out ordinary Ghanaians.",
       icon: (
-        <svg className="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+        <svg className="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
+          <circle cx="12" cy="12" r="9" strokeLinecap="round" strokeLinejoin="round"/>
+          <text x="12" y="16" textAnchor="middle" fill="currentColor" stroke="none" fontSize="10" fontWeight="bold">₵</text>
         </svg>
       ),
     },
@@ -220,15 +221,10 @@ export default function Home() {
         <div className="hidden md:block container-custom relative z-30 text-center">
           <div className="max-w-6xl mx-auto fade-in-up">
             {/* Main Heading */}
-            <h1 className="text-display-premium mb-8 leading-none text-white max-w-5xl mx-auto">
-              <span className="block">Your Voice. Our Game.</span>
-              <span className="block text-gold-400">United Strong.</span>
+            <h1 className="text-display-premium mb-12 leading-none text-white max-w-5xl mx-auto">
+              <span className="block">NASSU</span>
+              <span className="block text-gold-400">National Sports Supporters Union</span>
             </h1>
-
-            {/* Description */}
-            <p className="text-body-premium text-xl md:text-2xl mb-12 max-w-3xl mx-auto leading-relaxed text-white opacity-95" style={{textShadow: "0 2px 4px rgba(0,0,0,0.3)"}}>
-              Based in Kumasi, NASSU unites football supporters across the Ashanti Region to fight for fair treatment, affordable access, and a stronger voice in the beautiful game we all love.
-            </p>
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row justify-center gap-6">
@@ -417,44 +413,60 @@ export default function Home() {
         <div className="absolute bottom-0 left-0 w-96 h-96 bg-green-600/5 rounded-full blur-3xl -translate-x-1/3"></div>
 
         <div className="container-custom relative z-10">
-          <div className="text-center mb-16 md:mb-20">
-            <div className="inline-flex items-center bg-primary-600/10 backdrop-blur-sm px-6 py-2.5 rounded-full mb-6 border border-primary-600/20">
-              <span className="text-primary-600 font-bold text-sm uppercase tracking-wider">Supporter Stories</span>
+          <div className="text-center mb-20 md:mb-24">
+            <div className="inline-flex items-center gap-2 bg-gradient-to-r from-primary-600/10 via-gold-400/10 to-green-600/10 backdrop-blur-sm px-8 py-3 rounded-full mb-8 border border-primary-600/20 shadow-sm">
+              <svg className="w-5 h-5 text-primary-600" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M10 12a2 2 0 100-4 2 2 0 000 4z"/>
+                <path fillRule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clipRule="evenodd"/>
+              </svg>
+              <span className="text-primary-600 font-bold text-sm uppercase tracking-widest">Member Voices</span>
             </div>
-            <h2 className="text-display text-4xl md:text-5xl lg:text-6xl text-gray-900 mb-6 max-w-4xl mx-auto leading-tight" style={{fontFamily: 'Playfair Display'}}>
-              Hear From Our Members
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-8 max-w-4xl mx-auto leading-tight" style={{fontFamily: 'Playfair Display'}}>
+              Stories From The Heart of <span className="text-green-600">Kumasi</span>
             </h2>
-            <p className="text-body-premium text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              Real Ashanti supporters. Real impact. Real change across Kumasi and beyond.
+            <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed font-light">
+              Passionate voices from Baba Yara Stadium and across the Ashanti Region—real supporters, real victories, real transformation in Ghana football.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 max-w-6xl mx-auto">
+          {/* Masonry-Style Testimonial Layout - No Cards */}
+          <div className="max-w-6xl mx-auto space-y-16 md:space-y-20">
             {testimonials.map((testimonial, index) => (
-              <div key={index} className="relative bg-white p-8 md:p-10 rounded-3xl shadow-lg hover:shadow-2xl border-t-4 border-primary-600 hover:-translate-y-2 transition-all duration-500 group overflow-hidden">
-                {/* Decorative Quote Background */}
-                <div className="absolute top-0 right-0 w-32 h-32 bg-gold-400/5 rounded-full -translate-y-1/2 translate-x-1/2 group-hover:scale-150 transition-transform duration-500"></div>
+              <div
+                key={index}
+                className={`group relative ${
+                  index % 2 === 0
+                    ? 'md:grid md:grid-cols-12 md:gap-16 items-center'
+                    : 'md:grid md:grid-cols-12 md:gap-16 items-center'
+                }`}
+              >
+                {/* Large Quote Mark */}
+                <div className={`${index % 2 === 0 ? 'md:col-span-2' : 'md:col-span-2 md:order-2'} mb-6 md:mb-0`}>
+                  <svg className="w-20 h-20 md:w-24 md:h-24 text-gold-400/30 group-hover:text-gold-400/50 transition-colors duration-300" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
+                  </svg>
+                </div>
 
-                {/* Quote Icon */}
-                <div className="relative mb-6">
-                  <div className="inline-flex items-center justify-center w-14 h-14 bg-gradient-to-br from-gold-400/20 to-gold-500/20 rounded-2xl">
-                    <svg className="w-8 h-8 text-gold-400 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
-                    </svg>
+                {/* Testimonial Content */}
+                <div className={`${index % 2 === 0 ? 'md:col-span-10' : 'md:col-span-10 md:order-1'} space-y-6`}>
+                  {/* Quote Text */}
+                  <blockquote className="text-2xl md:text-3xl lg:text-4xl font-light text-gray-800 leading-relaxed" style={{fontFamily: 'Playfair Display'}}>
+                    "{testimonial.quote}"
+                  </blockquote>
+
+                  {/* Author Info with Accent Line */}
+                  <div className="flex items-center gap-6">
+                    <div className="h-px w-16 bg-gradient-to-r from-primary-600 via-gold-400 to-transparent group-hover:w-24 transition-all duration-500"></div>
+                    <div>
+                      <p className="text-xl font-bold text-gray-900" style={{fontFamily: 'Playfair Display'}}>
+                        {testimonial.name}
+                      </p>
+                      <p className="text-base text-primary-600 font-semibold mt-1">
+                        {testimonial.club}
+                      </p>
+                    </div>
                   </div>
                 </div>
-
-                <p className="relative text-body-premium text-gray-700 group-hover:text-gray-800 mb-8 leading-relaxed italic text-lg transition-colors duration-300">
-                  "{testimonial.quote}"
-                </p>
-
-                <div className="relative border-t-2 border-gray-100 group-hover:border-primary-600/30 pt-5 transition-colors duration-300">
-                  <p className="font-bold text-lg text-gray-900 group-hover:text-primary-600 transition-colors duration-300" style={{fontFamily: 'Playfair Display'}}>{testimonial.name}</p>
-                  <p className="text-sm font-semibold text-primary-600 mt-1">{testimonial.club}</p>
-                </div>
-
-                {/* Bottom Accent */}
-                <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-primary-600 via-gold-400 to-green-600 transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
               </div>
             ))}
           </div>
@@ -479,7 +491,7 @@ export default function Home() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-              <Link href="/membership" className="bg-white text-primary-600 hover:bg-gray-100 font-bold py-4 px-10 rounded-xl transition-all duration-200 shadow-lg hover:shadow-xl hover:-translate-y-0.5 active:scale-95 inline-flex items-center group">
+              <Link href="/membership" className="bg-green-600 text-white hover:bg-green-700 font-bold py-4 px-10 rounded-xl transition-all duration-200 shadow-lg hover:shadow-xl hover:-translate-y-0.5 active:scale-95 inline-flex items-center group">
                 Become a Member Today
                 <svg className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
@@ -491,7 +503,7 @@ export default function Home() {
             </div>
 
             <p className="mt-8 text-white/90 text-sm">
-              Membership from GH₵50/year • All clubs welcome • 100% supporter-owned
+              GH₵2,500 registration + GH₵50 dues/month • All clubs welcome • 100% supporter-owned
             </p>
           </div>
         </div>
