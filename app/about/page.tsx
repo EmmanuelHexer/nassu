@@ -12,6 +12,9 @@ export default function AboutPage() {
       name: "Mr. Anthony Kwame Boateng",
       role: "Chair",
       description: "Leading Ashanti supporter and advocate for fair treatment in Ghana football",
+      image: "/images/chairman.jpg",
+      imagePosition: "center -60%",
+      imageScale: "scale-150",
     },
     {
       name: "Mr. Eric Tuffour",
@@ -22,6 +25,9 @@ export default function AboutPage() {
       name: "Mr. Nana Amoateng",
       role: "Secretary",
       description: "Passionate advocate for supporter rights and community engagement",
+      image: "/images/secretary.jpg",
+      imagePosition: "center 20%",
+      imageScale: "scale-[1.35]",
     },
   ];
 
@@ -178,15 +184,26 @@ export default function AboutPage() {
                 {/* Avatar with gradient border */}
                 <div className="relative w-36 h-36 mx-auto mb-8">
                   <div className="absolute inset-0 bg-gradient-to-br from-primary-600 via-gold-400 to-green-600 rounded-full opacity-20 group-hover:opacity-40 transition-opacity duration-300 blur-xl"></div>
-                  <div className="relative w-36 h-36 bg-gradient-to-br from-primary-600 to-primary-700 rounded-full flex items-center justify-center transition-transform duration-300 group-hover:scale-105 shadow-lg">
-                    <span className="text-5xl font-bold text-white" style={{fontFamily: 'Playfair Display'}}>
-                      {member.name
-                        .split(" ")
-                        .slice(-2)
-                        .map((n) => n[0])
-                        .join("")}
-                    </span>
-                  </div>
+                  {member.image ? (
+                    <div className="relative w-36 h-36 rounded-full overflow-hidden transition-transform duration-300 group-hover:scale-105 shadow-lg ring-4 ring-white">
+                      <img
+                        src={member.image}
+                        alt={member.name}
+                        className={`w-full h-full object-cover ${member.imageScale || "scale-150"}`}
+                        style={{ objectPosition: member.imagePosition || "center 20%" }}
+                      />
+                    </div>
+                  ) : (
+                    <div className="relative w-36 h-36 bg-gradient-to-br from-primary-600 to-primary-700 rounded-full flex items-center justify-center transition-transform duration-300 group-hover:scale-105 shadow-lg">
+                      <span className="text-5xl font-bold text-white" style={{fontFamily: 'Playfair Display'}}>
+                        {member.name
+                          .split(" ")
+                          .slice(-2)
+                          .map((n) => n[0])
+                          .join("")}
+                      </span>
+                    </div>
+                  )}
                 </div>
 
                 {/* Member Info */}
