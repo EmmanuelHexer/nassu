@@ -10,24 +10,24 @@ export default function AboutPage() {
   const boardMembers = [
     {
       name: "Mr. Anthony Kwame Boateng",
-      role: "Chair",
+      role: "President",
       description: "Leading Ashanti supporter and advocate for fair treatment in Ghana football",
       image: "/images/chairman.jpg",
       imagePosition: "center -60%",
       imageScale: "scale-150",
     },
     {
-      name: "Mr. Eric Tuffour",
-      role: "Vice Chair",
-      description: "Dedicated supporter with extensive experience in grassroots organizing",
-    },
-    {
       name: "Mr. Nana Amoateng",
-      role: "Secretary",
+      role: "Vice President",
       description: "Passionate advocate for supporter rights and community engagement",
       image: "/images/secretary.jpg",
       imagePosition: "center 20%",
       imageScale: "scale-[1.35]",
+    },
+    {
+      name: "Mr. Eric Tuffour",
+      role: "Secretary",
+      description: "Dedicated supporter with extensive experience in grassroots organizing",
     },
   ];
 
